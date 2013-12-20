@@ -22,7 +22,6 @@ import net.tds.magicpets.handler.ConnectionHandler;
 import net.tds.magicpets.item.Items;
 import net.tds.magicpets.lib.Config;
 import net.tds.magicpets.lib.Reference;
-import net.tds.magicpets.packet.PacketHandler;
 import net.tds.magicpets.proxy.CommonProxy;
 
 import java.util.Arrays;
@@ -41,7 +40,7 @@ import java.util.Arrays;
 //Boss mobs need to be added to the spawn code.
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
-@NetworkMod(clientSideRequired = true, serverSideRequired = true, channels = "maigcpets", packetHandler = PacketHandler.class)
+@NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class Elementals {
 	
 	@SidedProxy(serverSide = Reference.PROXY_SERVER, clientSide = Reference.PROXY_CLIENT)

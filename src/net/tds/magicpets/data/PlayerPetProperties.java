@@ -8,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
-import net.tds.magicpets.packet.PacketMP;
-import net.tds.magicpets.packet.PacketSyncPet;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -128,20 +126,4 @@ public class PlayerPetProperties implements IExtendedEntityProperties {
 		
 		return this.petOut;
 	}
-
-    public void syncExtendedProperties() {
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        DataOutputStream dos = new DataOutputStream(bos);
-        try {
-
-            dos.writeBoolean(isPetOut()); // isPetOut
-            PacketMP packet = new PacketSyncPet(bos.toByteArray());
-            PacketDispatcher.sendPacketToPlayer(packet, (Player)player);
-        } catch(IOException e) {
-
-            e.printStackTrace();
-        }
-        
-    } 
 }

@@ -1,0 +1,19 @@
+#English File
+
+#Items
+item.elementals.spawnCrystal.name=Spawning Crystal
+item.elementals.essence.name=Soul Essence
+
+#Entity
+entity.elementals.baby.airPet.name=
+entity.elementals.earthPet.name=Earth Turtle
+entity.elementals.baby.firePet.name=Fire Elemental
+entity.elementals.baby.lightPet.name=Fairy[wip]
+entity.elementals.baby.undeadPet.name=Reaper[wip]
+entity.elementals.baby.waterPet.name=Land Shark
+entity.elementals.boss.airBoss.name=Dragon[wip]
+entity.elementals.boss.earthBoss.name=Ancient Golem
+entity.elementals.boss.fireBoss.name=Fire Golem Boss
+entity.elementals.boss.lightBoss.name=Cenetaur[wip]
+entity.elementals.boss.undeadBoss.name=Skeleton[wip]
+entity.elementals.boss.waterBoss.name=Leviathan Boss

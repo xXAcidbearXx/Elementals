@@ -1,0 +1,20 @@
+#German File
+#Credits: Vexatos
+
+#Items
+item.elementals.spawnCrystal.name=Schaffungskristall
+item.elementals.essence.name=Seelenessenz
+
+#Entity
+entity.elementals.baby.airPet.name= Greif[WIP]
+entity.elementals.baby.earthPet.name=Erdschildkröte
+entity.elementals.baby.firePet.name=Feuer-Elementar
+entity.elementals.baby.lightPet.name=Fee[wip]
+entity.elementals.baby.undeadPet.name=Schnitter[wip]
+entity.elementals.baby.waterPet.name=Landhai
+entity.elementals.boss.airBoss.name=Drache[wip]
+entity.elementals.boss.earthBoss.name=Antiker Golem
+entity.elementals.boss.fireBoss.name=Feuergolem
+entity.elementals.boss.lightBoss.name=Zentaur[wip]
+entity.elementals.boss.undeadBoss.name=Skelett[wip]
+entity.elementals.boss.waterBoss.name=Leviathan

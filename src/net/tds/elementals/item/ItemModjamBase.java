@@ -14,7 +14,7 @@ public class ItemModjamBase extends Item {
 	@Override
 	public Item setUnlocalizedName(String unlocalized) {
 		
-		super.setUnlocalizedName("magicpets." + unlocalized);
+		super.setUnlocalizedName("elementals." + unlocalized);
 		return this;
 	}
 }

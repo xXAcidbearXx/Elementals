@@ -8,7 +8,7 @@ import net.tds.elementals.entity.boss.EntityWaterBoss;
 
 public class RenderWaterBoss extends RenderLiving {
 
-	private static final ResourceLocation texture = new ResourceLocation("magicpets", "textures/entity/waterBoss.png");
+	private static final ResourceLocation texture = new ResourceLocation("elementals", "textures/entity/waterBoss.png");
 	
 	public RenderWaterBoss(ModelBase par1ModelBase, float par2) {
 		

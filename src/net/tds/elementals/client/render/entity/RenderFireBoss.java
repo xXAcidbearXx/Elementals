@@ -8,7 +8,7 @@ import net.tds.elementals.entity.boss.EntityFireBoss;
 
 public class RenderFireBoss extends RenderLiving {
 
-	private static final ResourceLocation texture = new ResourceLocation("magicpets", "textures/entity/fireBoss.png");
+	private static final ResourceLocation texture = new ResourceLocation("elementals", "textures/entity/fireBoss.png");
 	
 	public RenderFireBoss(ModelBase par1ModelBase, float par2) {
 		

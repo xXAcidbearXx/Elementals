@@ -15,9 +15,6 @@ public class ConnectionHandler implements IConnectionHandler {
 
 	@Override
 	public void playerLoggedIn(Player player, NetHandler netHandler, INetworkManager manager) {
-
-		//This is not part of the modjam mod entry and is used to help us get a list of players who have used our
-		//mod before the jam ends. 
 		
 		if (Config.event) {
 			

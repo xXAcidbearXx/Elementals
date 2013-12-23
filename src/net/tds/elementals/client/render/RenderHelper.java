@@ -9,10 +9,6 @@ import net.minecraft.util.Icon;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-
-/**
- * Author: ShadowChild.
- */
 public class RenderHelper {
 
     public static void drawIconIn3D(ItemStack stack, Icon icon) {

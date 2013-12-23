@@ -12,7 +12,7 @@ import net.tds.elementals.entity.passive.EntityBabyFirePet;
 
 public class RenderBabyFirePet extends RenderLiving {
 
-	private static final ResourceLocation texture = new ResourceLocation("magicpets", "textures/entity/fireElement.png");
+	private static final ResourceLocation texture = new ResourceLocation("elementals", "textures/entity/fireElement.png");
 	
 	private final ModelBabyFirePet modelGolem;
 	

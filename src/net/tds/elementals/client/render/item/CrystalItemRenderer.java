@@ -6,10 +6,6 @@ import net.minecraftforge.client.IItemRenderer;
 import net.tds.elementals.client.render.RenderHelper;
 import net.tds.elementals.event.IconEventHandler;
 
-
-/**
- * Author: ShadowChild.
- */
 public class CrystalItemRenderer implements IItemRenderer {
 
     @Override

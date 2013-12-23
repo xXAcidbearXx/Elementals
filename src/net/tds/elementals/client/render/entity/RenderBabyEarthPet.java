@@ -8,7 +8,7 @@ import net.tds.elementals.entity.passive.EntityBabyEarthPet;
 
 public class RenderBabyEarthPet extends RenderLiving {
 
-	private static final ResourceLocation texture = new ResourceLocation("magicpets", "textures/entity/earthElement.png");
+	private static final ResourceLocation texture = new ResourceLocation("elementals", "textures/entity/earthElement.png");
 	
 	public RenderBabyEarthPet(ModelBase par1ModelBase, float par2) {
 		

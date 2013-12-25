@@ -1,0 +1,19 @@
+#Chinese File
+
+#Items
+item.magicpets.spawnCrystal.name=刷怪水晶
+item.magicpets.essence.name=精魂
+
+#Entity
+entity.TDS_MP.baby.airPet.name=
+entity.TDS_MP.baby.earthPet.name=岩龟
+entity.TDS_MP.baby.firePet.name=火元素
+entity.TDS_MP.baby.lightPet.name=光精灵
+entity.TDS_MP.baby.undeadPet.name=死神
+entity.TDS_MP.baby.waterPet.name=陆行鲨
+entity.TDS_MP.boss.airBoss.name=龙
+entity.TDS_MP.boss.earthBoss.name=古代傀儡
+entity.TDS_MP.boss.fireBoss.name=火焰傀儡王
+entity.TDS_MP.boss.lightBoss.name=半人马
+entity.TDS_MP.boss.undeadBoss.name=骷髅王
+entity.TDS_MP.boss.waterBoss.name=海妖利维坦

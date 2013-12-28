@@ -10,6 +10,7 @@ public class EntityFireBoss extends EntityMagicalBoss {
 
 		super(par1World);
 		this.setSize(2.0f, 2.7f);
+		this.isImmuneToFire = true;
 	}
 	
     public boolean attackEntityAsMob(Entity entity) {

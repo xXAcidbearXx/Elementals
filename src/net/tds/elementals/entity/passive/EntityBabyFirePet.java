@@ -21,7 +21,8 @@ public class EntityBabyFirePet extends EntityMagicalPet {
 		this.setSize(1.0f, 1.0f);
 		this.noClip = false;
 		this.healthModifier = 1;
-		this.damageModifier = (int) 1;
+		this.damageModifier = 1;
+		this.isImmuneToFire = true;
 	}
 	
     public boolean attackEntityAsMob(Entity entity) {

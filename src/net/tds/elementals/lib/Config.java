@@ -10,10 +10,10 @@ public class Config {
 	
 	public static final String CATEGORY_MODID = "Mod ID Values";
 	public static boolean playerMessage;
-	public static boolean event;
 	
 	public static int crystalID;
     public static int essenceID;
+    public static int resolverID;
     
     public static int airPetID;
     public static int earthPetID;
@@ -40,10 +40,10 @@ public class Config {
 		conf.load();
 		
 		playerMessage = conf.get(conf.CATEGORY_GENERAL, "Should messages sent to the player also be sent to the server/console", false).getBoolean(false);
-		event = conf.get(conf.CATEGORY_GENERAL, "Changing this to False will disable the event notice", true).getBoolean(true);
 		
 		crystalID = conf.get(conf.CATEGORY_ITEM, "Item ID for Summoning Crystal", 24380).getInt();
         essenceID = conf.get(conf.CATEGORY_ITEM, "Item ID for Essences", 24381).getInt();
+        resolverID = conf.get(conf.CATEGORY_ITEM, "Item ID for Pet Resolver", 24382).getInt();
         
         airPetID = conf.get(CATEGORY_MODID, "Air Pet ID", 300).getInt();
         earthPetID = conf.get(CATEGORY_MODID, "Earth Pet ID", 301).getInt();

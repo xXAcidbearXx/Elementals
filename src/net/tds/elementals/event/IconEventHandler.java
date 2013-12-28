@@ -24,7 +24,7 @@ public class IconEventHandler {
             // Items
             for(int i = 0; i < element_types.length; i++) {
 
-                crystalIcons[i] = evt.map.registerIcon("magicpets:crystal_" + element_types[i]);
+                crystalIcons[i] = evt.map.registerIcon("elementals:crystal_" + element_types[i]);
             }
         }
     }

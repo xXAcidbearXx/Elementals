@@ -17,7 +17,6 @@ public class EntityBabyWaterPet extends EntityMagicalPet{
 		this.noClip = false;
 		this.healthModifier = 1;
 		this.damageModifier = (int) 1;
-		this.SpeedModifier = (int) 0.001;
 	}
 	
 	protected void applyEntityAttributes() {

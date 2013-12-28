@@ -28,19 +28,17 @@ public class EntityDeathHandler {
 	@ForgeSubscribe
 	public void onMobDeath(LivingDeathEvent event) {
 		
+		if (event.entity instanceof EntityMagicalPet) {
+			
+			EntityMagicalPet pet = (EntityMagicalPet) event.entity;
+			PlayerPetProperties.get(pet.getEntityPetOwner()).setPetOut(false);
+		}
+		
 		if (event.entity instanceof EntityLiving && !(event.entity instanceof EntityMagicalPet)) {
 			
 			if (event.source.getEntity() != null) {
 				
 				Entity source = event.source.getEntity();
-				
-				if (event.entity instanceof EntityMagicalPet) {
-					
-					EntityMagicalPet pet = (EntityMagicalPet) event.entity;
-					
-					PlayerPetProperties.get(pet.getEntityPetOwner()).setCurrentPet(0, 0);
-					PlayerPetProperties.get(pet.getEntityPetOwner()).setPetOut(false);
-				}
 				
 				if (source instanceof EntityPlayer) {
 					

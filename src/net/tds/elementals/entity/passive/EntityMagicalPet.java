@@ -89,6 +89,13 @@ public class EntityMagicalPet extends EntityTameable {
 		
 	}
 	
+	protected void applyEntityAttributes() {
+		
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10 + (getPetLevel() * this.healthModifier));
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(1 + (getPetLevel() * this.damageModifier));
+	}
+	
 	/**
 	 * Sets the owner of the pet.
 	 * @param owner: name of the owner being set.

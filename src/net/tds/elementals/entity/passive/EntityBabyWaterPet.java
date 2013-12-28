@@ -16,13 +16,7 @@ public class EntityBabyWaterPet extends EntityMagicalPet{
 		this.setSize(1.0f, 1.0f);
 		this.noClip = false;
 		this.healthModifier = 1;
-		this.damageModifier = (int) 1;
-	}
-	
-	protected void applyEntityAttributes() {
-		
-		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10 + (getPetLevel() * this.healthModifier));
+		this.damageModifier = 1;
 	}
 	
     public boolean attackEntityAsMob(Entity entity) {

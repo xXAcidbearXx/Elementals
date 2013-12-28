@@ -93,8 +93,12 @@ public class EntityMagicalPet extends EntityTameable {
 		
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10 + (getPetLevel() * this.healthModifier));
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(1 + (getPetLevel() * this.damageModifier));
 	}
+	
+    public boolean attackEntityAsMob(Entity par1Entity) {
+
+        return par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), (float)1 + (getPetLevel() * this.damageModifier));
+    }
 	
 	/**
 	 * Sets the owner of the pet.

@@ -10,8 +10,7 @@ import net.tds.elementals.item.ItemSpawningCrystal;
 import net.tds.elementals.item.Items;
 import cpw.mods.fml.common.IPlayerTracker;
 
-@Deprecated
-public class PlayerTracker implements IPlayerTracker {
+public class PlayerTrackingHandler implements IPlayerTracker {
 
 	@Override
 	public void onPlayerLogin(EntityPlayer player) {

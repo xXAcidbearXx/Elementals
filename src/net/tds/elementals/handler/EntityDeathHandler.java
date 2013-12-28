@@ -1,4 +1,4 @@
-package net.tds.elementals.event;
+package net.tds.elementals.handler;
 
 import java.util.UUID;
 
@@ -21,7 +21,7 @@ import net.tds.elementals.entity.passive.EntityMagicalPet;
 import net.tds.elementals.item.ItemSpawningCrystal;
 import net.tds.elementals.item.Items;
 
-public class MobDeathEvent {
+public class EntityDeathHandler {
 	
 	ItemStack correctCrystal;
 	

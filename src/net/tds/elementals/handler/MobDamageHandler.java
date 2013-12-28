@@ -1,4 +1,4 @@
-package net.tds.elementals.event;
+package net.tds.elementals.handler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.ForgeSubscribe;
@@ -8,7 +8,7 @@ import net.tds.elementals.entity.passive.EntityMagicalPet;
 import net.tds.elementals.lib.Format;
 import net.tds.elementals.proxy.ClientProxy;
 
-public class MobHurtEvent {
+public class MobDamageHandler {
 
 	@ForgeSubscribe
 	public void onMobHurt(LivingHurtEvent event) {

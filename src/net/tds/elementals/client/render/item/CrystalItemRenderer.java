@@ -4,7 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.client.IItemRenderer;
 import net.tds.elementals.client.render.RenderHelper;
-import net.tds.elementals.event.IconEventHandler;
+import net.tds.elementals.handler.IconEventHandler;
 
 public class CrystalItemRenderer implements IItemRenderer {
 

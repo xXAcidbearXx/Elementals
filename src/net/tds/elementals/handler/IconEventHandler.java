@@ -1,4 +1,4 @@
-package net.tds.elementals.event;
+package net.tds.elementals.handler;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;

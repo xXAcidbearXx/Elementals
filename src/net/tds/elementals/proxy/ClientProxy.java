@@ -27,8 +27,8 @@ import net.tds.elementals.entity.boss.EntityWaterBoss;
 import net.tds.elementals.entity.passive.EntityBabyEarthPet;
 import net.tds.elementals.entity.passive.EntityBabyFirePet;
 import net.tds.elementals.entity.passive.EntityBabyWaterPet;
-import net.tds.elementals.event.IconEventHandler;
 import net.tds.elementals.handler.CapeHandler;
+import net.tds.elementals.handler.IconEventHandler;
 import net.tds.elementals.item.Items;
 
 

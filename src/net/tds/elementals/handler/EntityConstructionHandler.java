@@ -1,11 +1,11 @@
-package net.tds.elementals.event;
+package net.tds.elementals.handler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.tds.elementals.data.PlayerPetProperties;
 
-public class EntityConstructionEvent {
+public class EntityConstructionHandler {
 
 	@ForgeSubscribe
 	public void onEntityConstruction(EntityConstructing event) {

@@ -14,11 +14,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.tds.elementals.entity.EntityManager;
 import net.tds.elementals.entity.passive.EntityBabyEarthPet;
 import net.tds.elementals.entity.passive.EntityBabyFirePet;
-import net.tds.elementals.event.EntityConstructionEvent;
-import net.tds.elementals.event.ItemDropEvent;
-import net.tds.elementals.event.MobDeathEvent;
-import net.tds.elementals.event.MobHurtEvent;
-import net.tds.elementals.handler.ConnectionHandler;
+import net.tds.elementals.handler.EntityConstructionHandler;
+import net.tds.elementals.handler.EntityLootHandler;
+import net.tds.elementals.handler.EntityDeathHandler;
+import net.tds.elementals.handler.MobDamageHandler;
 import net.tds.elementals.item.Items;
 import net.tds.elementals.lib.Config;
 import net.tds.elementals.lib.Reference;
@@ -37,8 +36,6 @@ import java.util.Arrays;
 
 //pets currently don't have a cooldown. Pets need a cooldown to become less overpowered.
 
-//Boss mobs need to be added to the spawn code.
-
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class Elementals {
@@ -56,18 +53,17 @@ public class Elementals {
 		new Config(event.getSuggestedConfigurationFile());
 		new Items();
 		new EntityManager(this);
-		MinecraftForge.EVENT_BUS.register(new EntityConstructionEvent());	
-		MinecraftForge.EVENT_BUS.register(new MobDeathEvent());
-		MinecraftForge.EVENT_BUS.register(new ItemDropEvent());
-		MinecraftForge.EVENT_BUS.register(new MobHurtEvent());
+		MinecraftForge.EVENT_BUS.register(new EntityConstructionHandler());	
+		MinecraftForge.EVENT_BUS.register(new EntityDeathHandler());
+		MinecraftForge.EVENT_BUS.register(new EntityLootHandler());
+		MinecraftForge.EVENT_BUS.register(new MobDamageHandler());
 		proxy.registerRenders();
 		proxy.registerCapes();
 	}
 	
 	@EventHandler
 	public void init(FMLPreInitializationEvent event) {
-		
-		NetworkRegistry.instance().registerConnectionHandler(new ConnectionHandler());
+
 	}
 	
 	public void getModInfo(ModMetadata meta) {

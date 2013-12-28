@@ -1,4 +1,4 @@
-package net.tds.elementals.event;
+package net.tds.elementals.handler;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
@@ -12,7 +12,7 @@ import net.tds.elementals.entity.boss.EntityMagicalBoss;
 import net.tds.elementals.entity.boss.EntityWaterBoss;
 import net.tds.elementals.item.Items;
 
-public class ItemDropEvent {
+public class EntityLootHandler {
 	
 	@ForgeSubscribe()
 	public void dropItems(LivingDropsEvent event){

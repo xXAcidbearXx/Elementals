@@ -18,6 +18,7 @@ public abstract class EntityMagicalBoss extends EntityMob implements IBossDispla
         super(par1World);
 
         this.setSize(2.0F, 0.5F);
+        this.ignoreFrustumCheck = true;
         this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, 0.4D, false));
         this.tasks.addTask(2, new EntityAIWander(this, 0.4D));
         this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));

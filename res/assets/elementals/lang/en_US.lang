@@ -17,3 +17,8 @@ entity.elementals.boss.fireBoss.name=Fire Golem Boss
 entity.elementals.boss.lightBoss.name=Cenetaur[wip]
 entity.elementals.boss.undeadBoss.name=Skeleton[wip]
 entity.elementals.boss.waterBoss.name=Leviathan Boss
+
+#GUI
+gui.petName.title=Set Your Pets Name
+gui.petName.box=Pet Name
+gui.petName.info=Enter the desired pets name and then click done.

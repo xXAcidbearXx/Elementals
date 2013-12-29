@@ -73,8 +73,10 @@ public class GuiPetName extends GuiScreen {
 					try {
 						
 						dos.writeUTF(this.nameField.getText().trim());
+						dos.writeUTF(this.mc.thePlayer.username);
+						dos.writeInt(this.mc.theWorld.provider.dimensionId);
 						Packet250CustomPayload packet = new PacketUpdatePetName(baos.toByteArray());
-						PacketDispatcher.sendPacketToPlayer(packet, (Player)this.mc.thePlayer);
+						PacketDispatcher.sendPacketToAllPlayers(packet);
 					} catch(Exception e) {
 						
 						e.printStackTrace();

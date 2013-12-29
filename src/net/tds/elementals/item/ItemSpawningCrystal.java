@@ -64,8 +64,8 @@ public class ItemSpawningCrystal extends ItemModjamBase {
     		
     		if (!stack.stackTagCompound.hasKey("Owner")) {
 
+    			Minecraft.getMinecraft().displayGuiScreen(new GuiPetName(player.getHeldItem()));
     			stack.stackTagCompound.setString("Owner", player.username);
-    			player.openGui(Elementals.instance, 1, world, 0, 0, 0);
     			return stack;
     		}
     		

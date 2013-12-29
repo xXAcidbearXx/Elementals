@@ -12,14 +12,6 @@ public class GuiHandler implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 		
-		if (id == 1) {
-			
-			if (player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemSpawningCrystal) {
-				
-				return new GuiPetName(player.getHeldItem());
-			}
-		}
-		
 		return null;
 	}
 	

@@ -2,12 +2,13 @@ package net.tds.elementals.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.tds.elementals.lib.Config;
 import net.tds.elementals.lib.Reference;
 
 public class CommonProxy {
 
-	public static void sendChatToPlayer(EntityPlayer Player, String message) {
+	public void sendChatToPlayer(EntityPlayer Player, String message) {
 		
 		if (Config.playerMessage) {
 			
@@ -22,8 +23,8 @@ public class CommonProxy {
 	public void registerCapes() {
 		
 	}
-	
-	public static void openNameGui(ItemStack stack) {
+
+	public void openGui(int id, Object... objects) {
 		
 	}
 }

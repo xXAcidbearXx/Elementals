@@ -1,12 +1,6 @@
 package net.tds.elementals.proxy;
 
-import java.util.Arrays;
-
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.model.ModelPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatMessageComponent;
@@ -35,11 +29,14 @@ import net.tds.elementals.entity.passive.EntityBabyWaterPet;
 import net.tds.elementals.handler.CapeHandler;
 import net.tds.elementals.handler.IconEventHandler;
 import net.tds.elementals.item.Items;
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 
 public class ClientProxy extends CommonProxy {
 
-	public static void sendChatToPlayer(EntityPlayer player, String message) {
+	@Override
+	public void sendChatToPlayer(EntityPlayer player, String message) {
 		
 		if (player.worldObj.isRemote) {
 			
@@ -47,6 +44,7 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 	
+	@Override
 	public void registerRenders() {
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBabyFirePet.class, new RenderBabyFirePet(new ModelBabyFirePet(), 0.3F));
@@ -62,6 +60,7 @@ public class ClientProxy extends CommonProxy {
         MinecraftForge.EVENT_BUS.register(new IconEventHandler());
 	}
 	
+	@Override
 	public void registerCapes() {
 		
 		String[] team = {"darkhax", "viper283", "HoopaWolf", "thisguy1045"};
@@ -69,9 +68,11 @@ public class ClientProxy extends CommonProxy {
 		CapeHandler.registerCapesFromList(team, "http://i.imgur.com/sZ6wSBh.png");
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public static void openNameGui(ItemStack stack) {
+	@Override
+	public void openGui(int id, Object... objects) {
 		
-		Minecraft.getMinecraft().displayGuiScreen(new GuiPetName(stack));
+		switch(id) {
+		case 0: FMLClientHandler.instance().displayGuiScreen(Minecraft.getMinecraft().thePlayer, new GuiPetName((ItemStack)objects[0]));
+		}
 	}
 }

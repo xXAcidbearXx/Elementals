@@ -13,6 +13,7 @@ import net.tds.elementals.data.PlayerPetProperties;
 import net.tds.elementals.entity.passive.EntityMagicalPet;
 import net.tds.elementals.enums.EnumElement;
 import net.tds.elementals.lib.Format;
+import net.tds.elementals.proxy.ClientProxy;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
@@ -63,8 +64,9 @@ public class ItemSpawningCrystal extends ItemModjamBase {
     		}
     		
     		if (!stack.stackTagCompound.hasKey("Owner")) {
-
-    			Minecraft.getMinecraft().displayGuiScreen(new GuiPetName(player.getHeldItem()));
+    				
+    			ClientProxy.openNameGui(player.getHeldItem());
+    			
     			stack.stackTagCompound.setString("Owner", player.username);
     			return stack;
     		}

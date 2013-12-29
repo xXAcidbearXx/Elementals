@@ -3,11 +3,16 @@ package net.tds.elementals.proxy;
 import java.util.Arrays;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelPig;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatMessageComponent;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
+import net.tds.elementals.client.gui.GuiPetName;
 import net.tds.elementals.client.model.ModelBabyEarthPet;
 import net.tds.elementals.client.model.ModelBabyFirePet;
 import net.tds.elementals.client.model.ModelBabyWaterPet;
@@ -62,5 +67,11 @@ public class ClientProxy extends CommonProxy {
 		String[] team = {"darkhax", "viper283", "HoopaWolf", "thisguy1045"};
 		
 		CapeHandler.registerCapesFromList(team, "http://i.imgur.com/sZ6wSBh.png");
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public static void openNameGui(ItemStack stack) {
+		
+		Minecraft.getMinecraft().displayGuiScreen(new GuiPetName(stack));
 	}
 }

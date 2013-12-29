@@ -17,6 +17,7 @@ import net.tds.elementals.entity.passive.EntityBabyFirePet;
 import net.tds.elementals.handler.EntityConstructionHandler;
 import net.tds.elementals.handler.EntityLootHandler;
 import net.tds.elementals.handler.EntityDeathHandler;
+import net.tds.elementals.handler.GuiHandler;
 import net.tds.elementals.handler.MobDamageHandler;
 import net.tds.elementals.item.Items;
 import net.tds.elementals.lib.Config;
@@ -59,6 +60,7 @@ public class Elementals {
 		MinecraftForge.EVENT_BUS.register(new MobDamageHandler());
 		proxy.registerRenders();
 		proxy.registerCapes();
+		NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
 	}
 	
 	@EventHandler

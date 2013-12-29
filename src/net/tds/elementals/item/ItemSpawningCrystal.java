@@ -1,5 +1,6 @@
 package net.tds.elementals.item;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -7,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.tds.elementals.Elementals;
+import net.tds.elementals.client.gui.GuiPetName;
 import net.tds.elementals.data.PlayerPetProperties;
 import net.tds.elementals.entity.passive.EntityMagicalPet;
 import net.tds.elementals.enums.EnumElement;
@@ -63,6 +65,7 @@ public class ItemSpawningCrystal extends ItemModjamBase {
     		if (!stack.stackTagCompound.hasKey("Owner")) {
 
     			stack.stackTagCompound.setString("Owner", player.username);
+    			Minecraft.getMinecraft().displayGuiScreen(new GuiPetName(player.getHeldItem()));
     			return stack;
     		}
     		

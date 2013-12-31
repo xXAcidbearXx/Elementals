@@ -1,0 +1,19 @@
+#Portugese File
+
+#Items
+item.elementals.spawnCrystal.name=Spawning Crystal
+item.elementals.essence.name=Soul Essence
+
+#Entity
+entity.elementals.baby.airPet.name=Hipogrifo[WIP]
+entity.elementals.baby.earthPet.name=Tartaruga terrestre
+entity.elementals.baby.firePet.name=Elemental do fogo
+entity.elementals.baby.lightPet.name=Fada[wip]
+entity.elementals.baby.undeadPet.name=Ceifador[wip]
+entity.elementals.baby.waterPet.name=Tubarão terrestre
+entity.elementals.boss.airBoss.name=Dragão[wip]
+entity.elementals.boss.earthBoss.name=Golem ancião
+entity.elementals.boss.fireBoss.name=Golem de Fogo
+entity.elementals.boss.lightBoss.name=Centauro[wip]
+entity.elementals.boss.undeadBoss.name=Mestre Esqueleto[wip]
+entity.elementals.boss.waterBoss.name=Leviatã
